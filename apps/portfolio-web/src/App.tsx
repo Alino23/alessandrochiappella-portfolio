@@ -1,11 +1,12 @@
 import "./App.css";
+import Hero from "./components/hero/Hero";
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="title">Ciao, sono Alessandro Chiappella</h1>
-      <p className="subtitle">Aspiring Front-End Developer</p>
-    </div>
+    <Hero
+      title="Ciao, sono Alessandro Chiappella"
+      subtitle="Aspiring Front-End developer"
+    />
   );
 }
 
