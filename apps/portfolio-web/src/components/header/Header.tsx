@@ -10,16 +10,24 @@ export default function Header() {
         <nav className="header_menu" aria-label="Primary">
           <ul className="header_list">
             <li>
-              <a href="#home">Home</a>
+              <a className="header_link" href="#home">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#projects">Progetti</a>
+              <a className="header_link" href="#projects">
+                Progetti
+              </a>
             </li>
             <li>
-              <a href="#about">About me</a>
+              <a className="header_link" href="#about">
+                About me
+              </a>
             </li>
             <li>
-              <a href="#contact">Contatti</a>
+              <a className="header_link" href="#contact">
+                Contatti
+              </a>
             </li>
           </ul>
         </nav>

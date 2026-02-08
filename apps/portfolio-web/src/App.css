@@ -7,6 +7,16 @@
     sans-serif;
 }
 
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page__main {
+  flex: 1; /* spinge il footer in basso */
+}
+
 body {
   margin: 0;
 }
