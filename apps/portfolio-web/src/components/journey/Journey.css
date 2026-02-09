@@ -1,0 +1,89 @@
+.journeyPinned {
+  position: relative;
+}
+
+.journeyPinned__sticky {
+  position: sticky;
+  top: 0;
+  height: 75vh;
+  display: grid;
+  place-items: center;
+  background: #ffffff;
+}
+
+.journeyPinned__inner {
+  width: min(960px, calc(100% - 40px));
+  display: grid;
+  gap: 16px;
+}
+
+.journeyPinned__kicker {
+  margin: 0;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.journeyPinned__step {
+  padding: 24px 0;
+  /* transizione “subentra” */
+  animation: fadeUp 280ms ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.journeyPinned__number {
+  font-weight: 800;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.journeyPinned__title {
+  margin: 6px 0 0;
+  font-size: 40px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.journeyPinned__text {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #334155;
+  max-width: 70ch;
+}
+
+.journeyPinned__progress {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.journeyPinned__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #cbd5e1;
+}
+
+.journeyPinned__dot.is-active {
+  background: #0f172a;
+}
+
+@media (max-width: 640px) {
+  .journeyPinned__title {
+    font-size: 30px;
+  }
+}
