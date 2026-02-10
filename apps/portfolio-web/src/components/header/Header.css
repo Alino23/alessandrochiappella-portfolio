@@ -1,9 +1,10 @@
 .header {
   position: sticky;
   top: 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.12);
   z-index: 10;
+  background-color: #0b1220;
+  color: #ffffff;
 }
 
 .header_container {
@@ -22,11 +23,11 @@
   font-size: 16px;
   color: #0f172a;
   text-decoration: none;
+  color: #ffffff;
 }
 
 .header_brand:hover {
   text-decoration: underline;
-  opacity: 0.85;
 }
 
 .header_list {
@@ -41,7 +42,7 @@
 .header_link {
   font-weight: 600;
   font-size: 14px;
-  color: #0f172a;
+  color: #ffffff;
   text-decoration: none;
   padding: 6px 8px;
   border-radius: 8px;
@@ -50,7 +51,7 @@
 }
 
 .header_link:hover {
-  background: #f8fafc;
+  text-decoration: underline;
 }
 
 .header_link:focus-visible {

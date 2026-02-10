@@ -7,7 +7,7 @@ type HeroProps = {
 
 export default function Hero({ title, subtitle }: HeroProps) {
   return (
-    <section className="hero_container" aria-label="Intro">
+    <section className="hero_container" aria-label="Intro" id="hero">
       <h1 className="title">{title}</h1>
       <p className="subtitle">{subtitle}</p>
       <div className="actions">
