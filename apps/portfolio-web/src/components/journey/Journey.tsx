@@ -68,6 +68,7 @@ export default function Journey() {
       className="journeyPinned"
       aria-label="Percorso"
       style={{ height: `${steps.length * 100}vh` }}
+      id="about"
     >
       <div className="journeyPinned__sticky">
         <div className="journeyPinned__inner">

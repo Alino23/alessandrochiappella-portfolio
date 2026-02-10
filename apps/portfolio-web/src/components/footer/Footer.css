@@ -17,7 +17,7 @@
 .footer_name p {
   margin: 0;
   font-size: 14px;
-  color: #e2e8f0;
+  color: #ffffff;
 }
 
 .footer_contact {
@@ -31,14 +31,13 @@
 }
 
 .footer_contact a {
-  color: #e2e8f0;
+  color: #ffffff;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
 }
 
 .footer_contact a:hover {
-  color: #ffffff;
   text-decoration: underline;
 }
 
