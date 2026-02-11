@@ -4,6 +4,15 @@ import { useEffect, useState } from "react";
 export default function Projects() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   useEffect(() => {
+    console.log(
+      "selectedId",
+      selectedId,
+      "body overflow:",
+      getComputedStyle(document.body).overflow,
+    );
+  }, [selectedId]);
+
+  useEffect(() => {
     const originalPaddingRight = document.body.style.paddingRight;
     const originalOverflow = document.body.style.overflow;
     if (selectedId !== null) {
