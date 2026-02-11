@@ -241,3 +241,9 @@ section {
     0 6px 16px rgba(168, 85, 247, 0.18),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
+
+@media (max-width: 640px) {
+  .projects_grid {
+    flex-direction: column;
+  }
+}

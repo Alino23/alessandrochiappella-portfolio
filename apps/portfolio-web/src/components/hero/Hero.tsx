@@ -10,14 +10,6 @@ export default function Hero({ title, subtitle }: HeroProps) {
     <section className="hero_container" aria-label="Intro" id="hero">
       <h1 className="title">{title}</h1>
       <p className="subtitle">{subtitle}</p>
-      <div className="actions">
-        <a href="#projects" className="btn">
-          Vedi i progetti
-        </a>
-        <a href="#contact" className="btn btn--ghost">
-          Contattami
-        </a>
-      </div>
     </section>
   );
 }
