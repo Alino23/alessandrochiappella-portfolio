@@ -32,6 +32,30 @@ export default function Journey() {
 
   const sectionRef = useRef<HTMLElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const stickyRef = useRef<HTMLDivElement | null>(null);
+  const [stepPx, setStepPx] = useState(650); // fallback iniziale
+
+  // 1) Misura altezza sticky (sempre coerente con CSS)
+  useEffect(() => {
+    const sticky = stickyRef.current;
+    if (!sticky) return;
+
+    const update = () => {
+      const h = Math.round(sticky.getBoundingClientRect().height);
+      setStepPx(h || 650);
+    };
+
+    update();
+
+    const ro = new ResizeObserver(() => update());
+    ro.observe(sticky);
+
+    window.addEventListener("resize", update);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", update);
+    };
+  }, [stepPx, steps.length]);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -41,13 +65,9 @@ export default function Journey() {
     const onScroll = () => {
       const rect = el.getBoundingClientRect();
 
-      // quanto hai "scorso dentro" la sezione (in px)
       const scrolledInside = -rect.top;
 
-      // ogni step vale 100vh di scroll
-      const stepSize = window.innerHeight;
-
-      const idx = Math.round(scrolledInside / stepSize);
+      const idx = Math.floor(scrolledInside / stepPx);
 
       const clamped = Math.min(Math.max(idx, 0), steps.length - 1);
       setActiveIndex(clamped);
@@ -67,7 +87,7 @@ export default function Journey() {
       ref={sectionRef}
       className="journeyPinned"
       aria-label="Percorso"
-      style={{ height: `${steps.length * 100}vh` }}
+      style={{ height: `${steps.length * stepPx}px` }}
       id="about"
     >
       <div className="journeyPinned__sticky">
