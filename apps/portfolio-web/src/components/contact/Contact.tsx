@@ -32,7 +32,7 @@ export default function Contact() {
       </button>
       <p>
         Se vogliamo parlarci schiaccia la scritta "Contattami" e scegli il
-        metodo che vuoi utilizzare
+        metodo che vuoi.
       </p>
     </section>
   );
