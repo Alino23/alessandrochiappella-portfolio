@@ -7,6 +7,11 @@ export default function Header() {
         <a href="#hero" className="header_brand">
           Alessandro Chiappella
         </a>
+        <img
+          src="../../public/logo.svg"
+          alt="Alessandro"
+          className="header_logo"
+        />
         <nav className="header_menu" aria-label="Primary">
           <ul className="header_list">
             <li>
