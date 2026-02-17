@@ -1,5 +1,5 @@
 section {
-  scroll-margin-top: 80px; /* circa altezza header */
+  scroll-margin-top: 80px;
 }
 
 .projects {
@@ -19,7 +19,7 @@ section {
   position: relative;
   padding-bottom: 14px;
   margin-bottom: 40px;
-  color: #0f172a; /* slate-900 → super pulito */
+  color: #0f172a;
 }
 
 .project_title.decorated::after {
@@ -30,12 +30,7 @@ section {
   width: 56px;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    #3b82f6,
-    /* blue */ #8b5cf6,
-    /* violet */ #ec4899 /* pink */
-  );
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.35);
   opacity: 0.85;
 }
@@ -64,10 +59,10 @@ section {
   background: linear-gradient(
     135deg,
     #22d3ee,
-    /* cyan */ #3b82f6,
-    /* blue */ #6366f1,
-    /* indigo */ #a855f7,
-    /* purple */ #ec4899 /* pink */
+    #3b82f6,
+    #6366f1,
+    #a855f7,
+    #ec4899
   );
 
   box-shadow:

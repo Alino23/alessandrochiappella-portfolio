@@ -31,6 +31,19 @@ export default function Projects() {
     };
   }, [selectedId]);
 
+  useEffect(() => {
+    if (!selectedId) return;
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedId(null);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [selectedId]);
+
   return (
     <section className="projects" id="projects">
       <h2 className="project_title decorated">I miei Progetti</h2>
